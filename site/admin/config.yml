@@ -1,0 +1,143 @@
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME
+  branch: main
+site_url: https://YOUR-SITE.netlify.app
+media_folder: site/images/uploads
+public_folder: /images/uploads
+publish_mode: editorial_workflow
+collections:
+  - name: site
+    label: Homepage, About, Skills, Contact
+    files:
+      - name: site
+        label: Main site content
+        file: site/content/site.json
+        format: json
+        fields:
+          - {name: name, label: Full name, widget: string}
+          - {name: highlight, label: Word in the name shown in gold, widget: string}
+          - {name: label, label: Small label above name, widget: string}
+          - {name: headline, label: Headline, widget: string}
+          - {name: intro, label: Introduction, widget: text}
+          - {name: photo, label: Homepage photo, widget: image}
+          - {name: cv, label: CV file (PDF) - leave empty to hide the button, widget: file, required: false}
+          - {name: linkedin, label: LinkedIn URL, widget: string, required: false}
+          - {name: x, label: X URL, widget: string, required: false}
+          - {name: instagram, label: Instagram URL, widget: string, required: false}
+          - {name: facebook, label: Facebook URL, widget: string, required: false}
+          - {name: about_text, label: About biography, widget: text}
+          - {name: about_photo, label: About photo, widget: image}
+          - {name: strengths, label: Professional strengths, widget: list, field: {name: s, label: Strength, widget: string}}
+          - name: tools
+            label: Tools
+            widget: list
+            fields:
+              - {name: name, label: Tool name, widget: string}
+              - {name: logo, label: Logo (optional), widget: image, required: false}
+          - {name: skills, label: Skills, widget: list, field: {name: s, label: Skill, widget: string}}
+          - name: workflow
+            label: Workflow stages
+            widget: list
+            fields:
+              - {name: title, label: Stage, widget: string}
+              - {name: text, label: Short explanation, widget: text}
+              - {name: icon, label: Icon, widget: select, options: [search, target, pen, send, chart, refresh, calendar, users, type, message]}
+          - {name: cases_title, label: Case studies heading, widget: string}
+          - {name: cases_intro, label: Case studies intro, widget: text}
+          - {name: contact_heading, label: Contact heading, widget: string}
+          - {name: contact_text, label: Contact text, widget: text}
+          - {name: email, label: Email, widget: string}
+          - {name: tagline, label: Footer tagline, widget: string}
+  - name: services
+    label: Services
+    files:
+      - name: services
+        label: Services
+        file: site/content/services.json
+        format: json
+        fields:
+          - name: items
+            label: Services
+            widget: list
+            fields:
+              - {name: title, label: Title, widget: string}
+              - {name: icon, label: Icon, widget: select, options: [search, target, pen, send, chart, refresh, calendar, users, type, message]}
+              - {name: description, label: Short description, widget: text}
+              - {name: points, label: Bullet points, widget: list, field: {name: p, label: Point, widget: string}}
+  - name: cases
+    label: Case studies
+    files:
+      - name: cases
+        label: Case studies
+        file: site/content/cases.json
+        format: json
+        fields:
+          - name: items
+            label: Case studies
+            widget: list
+            fields:
+              - {name: name, label: Brand or project name (anonymised is fine), widget: string}
+              - {name: category, label: Industry, widget: string}
+              - {name: platforms, label: Platforms managed, widget: string}
+              - {name: role, label: My role, widget: string}
+              - {name: duration, label: Duration (only if verified), widget: string, required: false}
+              - {name: overview, label: Overview, widget: text}
+              - {name: responsibilities, label: Responsibilities, widget: list, field: {name: r, label: Item, widget: string}}
+              - {name: strategies, label: Strategies implemented, widget: list, required: false, field: {name: r, label: Item, widget: string}}
+              - {name: results, label: Measurable results, widget: list, required: false, field: {name: r, label: Item, widget: string}}
+              - {name: screenshots, label: Evidence screenshots, widget: list, required: false, field: {name: i, label: Screenshot, widget: image}}
+              - {name: published, label: Show on website, widget: boolean, default: true}
+  - name: analytics
+    label: Analytics
+    files:
+      - name: analytics
+        label: Metrics and screenshots
+        file: site/content/analytics.json
+        format: json
+        fields:
+          - name: metrics
+            label: Metric cards
+            widget: list
+            fields:
+              - {name: platform, label: Platform, widget: select, options: [Facebook, X, Instagram, LinkedIn, TikTok, Other]}
+              - {name: metric, label: Metric, widget: select, options: [Total followers, Followers gained, Impressions, Reach, Engagement rate, Content views, Profile visits, Best-performing post]}
+              - {name: value, label: Value (e.g. 8.3K or 2,800,000), widget: string}
+              - {name: period, label: Reporting period, widget: string}
+              - {name: note, label: Short explanation, widget: string, required: false}
+              - name: trend
+                label: Trend data (optional, needs 2+ real periods)
+                widget: list
+                required: false
+                fields:
+                  - {name: label, label: Period, widget: string}
+                  - {name: value, label: Number, widget: number}
+          - name: gallery
+            label: Screenshot gallery
+            widget: list
+            fields:
+              - {name: title, label: Title, widget: string}
+              - {name: category, label: Type, widget: select, options: [Facebook Analytics, X Analytics, Audience Growth, Content Performance, Engagement Performance]}
+              - {name: date, label: Reporting date or period, widget: string, required: false}
+              - {name: caption, label: Caption, widget: string, required: false}
+              - {name: image, label: Screenshot, widget: image}
+  - name: work
+    label: Work samples
+    files:
+      - name: work
+        label: Work samples
+        file: site/content/work.json
+        format: json
+        fields:
+          - name: items
+            label: Work samples
+            widget: list
+            fields:
+              - {name: title, label: Title, widget: string}
+              - {name: category, label: Category, widget: select, options: [Graphics, Content Creation, Campaigns, Copywriting]}
+              - {name: platform, label: Platform, widget: string, required: false}
+              - {name: description, label: Short description, widget: text, required: false}
+              - {name: image, label: Image, widget: image, required: false}
+              - {name: video, label: Video file (MP4), widget: file, required: false}
+              - {name: video_url, label: Or video link (YouTube/other), widget: string, required: false}
+              - {name: date, label: Project date, widget: string, required: false}
