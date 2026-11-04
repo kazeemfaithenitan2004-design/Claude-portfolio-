@@ -84,70 +84,70 @@
    "category": "Facebook Analytics",
    "date": "28 days to mid-October",
    "caption": "1M views, 441K viewers.",
-   "image": "/images/uploads/fb-views-28d.jpg"
+   "image": "/images/upload/fb-views-28d.jpg"
   },
   {
    "title": "Page views, 14 days",
    "category": "Facebook Analytics",
    "date": "14 days to 10 October",
    "caption": "502K views, 226K viewers.",
-   "image": "/images/uploads/fb-views-14d.jpg"
+   "image": "/images/upload/fb-views-14d.jpg"
   },
   {
    "title": "X account analytics",
    "category": "X Analytics",
    "date": "14 Sep – 10 Oct",
    "caption": "605.1K impressions, 8.2K engagements.",
-   "image": "/images/uploads/x-analytics.jpg"
+   "image": "/images/upload/x-analytics.jpg"
   },
   {
    "title": "Page followers (earlier)",
    "category": "Audience Growth",
    "date": "",
    "caption": "4.6K followers.",
-   "image": "/images/uploads/fb-followers-before.jpg"
+   "image": "/images/upload/fb-followers-before.jpg"
   },
   {
    "title": "Page followers (later)",
    "category": "Audience Growth",
    "date": "",
    "caption": "8.3K followers.",
-   "image": "/images/uploads/fb-followers-after.jpg"
+   "image": "/images/upload/fb-followers-after.jpg"
   },
   {
    "title": "Best-performing post",
    "category": "Content Performance",
    "date": "Posted 24 September",
    "caption": "250,805 views.",
-   "image": "/images/uploads/fb-best-post.jpg"
+   "image": "/images/upload/fb-best-post.jpg"
   },
   {
    "title": "Post performance",
    "category": "Content Performance",
    "date": "Posted 25 September",
    "caption": "108,771 views.",
-   "image": "/images/uploads/fb-post-108k.jpg"
+   "image": "/images/upload/fb-post-108k.jpg"
   },
   {
    "title": "Reel retention",
    "category": "Content Performance",
    "date": "",
    "caption": "Audience retention across the first 10 seconds.",
-   "image": "/images/uploads/fb-retention.jpg"
+   "image": "/images/upload/fb-retention.jpg"
   },
   {
    "title": "Reel engagement",
    "category": "Engagement Performance",
    "date": "",
    "caption": "9.3K engagements.",
-   "image": "/images/uploads/fb-engagement.jpg"
+   "image": "/images/upload/fb-engagement.jpg"
   },
   {
    "title": "Post reactions",
    "category": "Engagement Performance",
    "date": "Posted 25 September",
    "caption": "Reactions, comments, saves and shares.",
-   "image": "/images/uploads/fb-reactions.jpg"
+   "image": "/images/upload/fb-reactions.jpg"
   }
  ]
 }
