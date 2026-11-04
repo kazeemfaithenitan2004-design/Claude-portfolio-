@@ -1,5 +1,5 @@
 [build]
-  publish = "Site"
+  publish = "site"
 [[redirects]]
   from = "/admin"
   to = "/admin/"
