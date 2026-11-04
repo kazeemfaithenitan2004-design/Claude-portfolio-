@@ -100,7 +100,7 @@ const LOGO={canva:'canva',capcut:'capcut','meta business suite':'meta','x analyt
 const zoom=(s,a,c)=>{G('lbi').src=s;G('lbi').alt=a;T('lbc',c);G('lb').showModal()};
 function filt(box,items,key,draw){const cats=['All',...new Set(items.map(i=>i[key]).filter(Boolean))];const go=c=>{box.innerHTML='';cats.forEach(k=>{const b=document.createElement('button');b.textContent=k;b.className=k===c?'on':'';b.onclick=()=>go(k);box.appendChild(b)});draw(items.filter(i=>c==='All'||i[key]===c))};go('All')}
 (async()=>{
-const [site,sv,cs,an]=await Promise.all([load('site'),load('services'),load('cases'),load('analytics')]);
+const [site,sv,cs,an]=await Promise.all([load('site'),load('services'),load('cases'),load('metrics')]);
 const s={...DS,...(site||{})};
 safe('hero',()=>{const hl=s.highlight&&s.name.includes(s.highlight)?esc(s.name).replace(esc(s.highlight),`<em>${esc(s.highlight)}</em>`):esc(s.name);H('nm',hl);T('hl',s.headline);T('in',s.intro);
  const pi=G('pi');if(pi&&s.photo)pi.src=ip(s.photo);const ai=G('ai');if(ai&&(s.about_photo||s.photo))ai.src=ip(s.about_photo||s.photo);
